@@ -19,7 +19,6 @@ import { APP_GUARD } from '@nestjs/core';
 import { JwtAuthGuard } from 'src/auth/passport/jwt-auth.guard';
 import { MailerModule } from '@nestjs-modules/mailer';
 import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handlebars.adapter';
-import { MailModule } from './mail/mail.module';
 
 @Module({
   imports: [
@@ -59,7 +58,6 @@ import { MailModule } from './mail/mail.module';
       }
       ),
     }),
-    MailModule,
   ],
   controllers: [AppController],
   providers: [AppService, CloudinaryService, {
